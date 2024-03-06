@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Formulär för att skicka data till en specifik URL via GET-metoden-->
+    <form action="http://webshare.mah.se/tszagh/response.php" method="get">
+        <fieldset> <!-- Fieldset för att göra en "ram" runt formulär delarna -->
+            <legend>Kontaktuppgifter</legend> <!--En legend för att ge det nya "stycket" en rubrik -->
+        <div>
+            <label for="namn">Skriv ditt namn:</label> <!-- Etikett för att beskriva syftet med ett formulärfält -->
+            <input type="text" id="namn" name="namn" placeholder="Ditt namn" required> <!-- Textinmatningsfält för användarens namn -->
+        </div>
+        <br>
+        <div>
+            <label for="ålder">Skriv din ålder:</label> <!-- Etikett för att beskriva syftet med ett formulärfält -->
+            <input type="number" id="ålder" name="ålder" placeholder="Din ålder" required>  <!-- Nummerinmatningsfält för användarens ålder -->
+        </div>            
+        </fieldset>
+        <fieldset>
+            <legend>Blomstermålabladet</legend> <!-- En legend för att ge det nya "stycket" em rubrik -->
+            <div>
+            <p>Hur ofta besöker du Blomstermålabladet?</p> <!-- Rubrik för en fråga inom formuläret -->
+            <input type="radio" name="besök" id="varje_dag"> <!-- Radioknapp för att välja besöksfrekvens -->
+            <label for="varje_dag">Varje dag</label> 
+            <!-- Samma princip i de nästföljande radioknappar-->
+        </div>
+        <div>
+            <input type="radio" name="besök" id="varannan_dag">
+            <label for="varannan_dag">Varannan dag</label>
+        </div>
+        <div>
+            <input type="radio" name="besök" id="varje_vecka">
+            <label for="varje_vecka">Varje vecka</label>
+        </div>
+        <p>Vilka delar av blomstermålabladet brukar du besöka?</p> <!-- Ny fråga om blomstermålabladet -->
+        <div>
+            <!-- Samma principer i checkboxarna som i radioknapparna-->
+            <input type="checkbox" name="delar" id="nyheter">
+            <label for="nyheter">Nyhter</label>
+        </div>
+        <div>
+            <input type="checkbox" name="delar" id="utrikes">
+            <label for="utrikes">Utrikes</label>
+        </div>
+        <div>
+            <input type="checkbox" name="delar" id="inrikes">
+            <label for="inrikes">Inrikes</label>
+        </div>
+        <div>
+            <input type="checkbox" name="delar" id="sport">
+            <label for="sport">Sport</label>
+        </div>
+        <div>
+            <input type="checkbox" name="delar" id="skvaller">
+            <label for="skvaller">Skvaller</label>
+        </div>
+        <div>
+            <input type="checkbox" name="delar" id="väder">
+            <label for="väder">Väder</label>
+        </div>
+        <div>
+            <input type="checkbox" name="delar" id="övrigt">
+            <label for="övrigt">Övrigt</label>
+        </div>
+        </fieldset>
+        <fieldset>
+            <legend>Vinn en T-shirt!</legend> <!-- En legend för att ge det nya "stycket" em rubrik -->
+        <div>
+            <p>Vad är det bästa med blomstermålabladet?</p> <!-- Fråga i den nya delen-->
+            <textarea name="bästa" id="bästa" cols="30" rows="10" placeholder="ex. Tidningen är bra strukturerad"></textarea> <!-- Textarea för att användaren ska kunna skriva, samt justerat storlek på rutan-->
+        </div>
+        <div>
+            <p>Vad är det sämsta med blomstermålabladet?</p> <!-- Fråga i den nya delen-->
+            <textarea name="sämsta" id="sämsta" cols="30" rows="10" placeholder="ex. Tidningen kostar för mycket"></textarea> <!-- Samma princip som på den raden över-->
+        </div>
+        <div>
+            <label for="epost">Skriv din email här</label> <!-- Använt epost för att användaren ska skriva in sin epost-->
+            <input type="email" name="epost" id="epost" placeholder="ex. kalleanka@gmail.com" required> <!-- Använd placeholder för att att ett exempel på text samt required för att inte kunna skicka utan att ha fyllt i-->
+        </div>
+        <div>
+            <label for="storlek">Välj din storlek</label>
+            <select name="storlek" id="storlek"> <!-- Select för att få en rullgardinsmeny-->
+            <option value="xs">XS</option>
+            <option value="s">S</option>
+            <option value="m" selected>M</option> <!-- Använt selected för att ha M som förval-->
+            <option value="l">L</option>
+            <option value="xl">XL</option>
+        </select>
+        </div>
+        </fieldset>
+        <fieldset>
+            <legend>Summera/Återställ</legend>
+            <input type="submit" value="Summera"> <!-- Submit-knapp för att kunna återställa formuläret -->
+            <input type="reset" value="Återställ"> <!-- Reset-knapp för att kunna återställa formuläret-->
+        </fieldset>
+    </form>
+</body>
+</html>
